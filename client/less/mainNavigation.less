@@ -1,33 +1,64 @@
 // Navigation
 .main-navigation {
-  padding: 15px 0 50px;
+  padding: 15px 0 50px 0;
   background-color:white;
   .navbar.navbar-default {
+    .sans-serif-font;
+    .transition-all;
     background-color: white;
     box-shadow: none;
     -webkit-box-shadow: none;
     border: 0;
-    .sans-serif-font;
-    .transition-all;
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
+      .tablet({
+        text-align: left;
+      });
     }
     li {
-      float:left;
+      float: left;
       margin-left: 35px;
-      text-transform: uppercase;
-      padding:  0;
+      padding: 0;
       a {
         color: @text-default;
         display: block;
-        font-size: 12px;
+        font-size: 14px;
         padding-bottom: 3px;
+        .tablet({
+          height: auto;
+          border: none;
+          color: white;
+          padding: 15px 0;
+        });
+      }
+      &:hover > a {
+        color:#f77979;
+        .tablet({
+          color: black;
+        });
+      }
+      .tablet({
+        display: block;
+        float: none;
+        font-size: 16px;
+        margin: 0;
+        padding-left: 15px;
+      });
+      &:nth-child(2n) {
+        .tablet({
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+        });
       }
     }
-    li:hover > a {
-      color:#f77979;
+    button {
+      font-size: 30px;
+      border: 0;
+      &:hover, &:focus, &:active {
+        background: none;
+      }
     }
     .navbar-header {
       box-shadow: none;
@@ -38,6 +69,20 @@
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
+      .tablet({
+        padding: 0 0 10px;
+      });
+    }
+    .navbar-collapse {
+      .tablet({
+        float: none;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        background-color: @theme-primary;
+        margin: 0 -15px;
+      });
     }
     .navbar-brand {
       float:left;
@@ -45,23 +90,16 @@
       padding:0;
       width:53px;
     }
-    @media (min-width: 768px) {
-      background-color: transparent;
-      border-color: fade(white, 30%);
-      .navbar-header .navbar-brand {
-        color: fade(white, 70%);
-        &:hover,
-        &:focus {
-          color: white;
-        }
-      }
-      .nav > li > a,
-      .nav > li > a:focus {
-        color: fade(@text-default, 70%);
-        &:hover {
-          color: @theme-primary;
-        }
-      }
-    }
+    .tablet({
+      border: 0;
+      margin: 0;
+      float: none;
+    });
   }
+  .tablet({
+    padding: 15px 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 0;
+  });
 }
