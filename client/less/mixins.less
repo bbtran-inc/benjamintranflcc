@@ -1,18 +1,24 @@
 // Mixins
+.small-mobile(@rules) {
+  @media (max-width:@small-mobile-width) {
+    @rules();
+  }
+}
+
 .mobile(@rules) {
-  @media (max-width: @tablet-width - 1px) {
+  @media (max-width: @mobile-width) {
     @rules();
   }
 }
 
 .tablet(@rules) {
-  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  @media (max-width: @tablet-width) {
     @rules();
   }
 }
 
 .desktop(@rules) {
-  @media (min-width: @desktop-width) {
+  @media (max-width: @desktop-width) {
     @rules();
   }
 }

@@ -5,6 +5,9 @@
     font-size:24px;
     text-transform:uppercase;
     margin-bottom:50px;
+    .tablet({
+      font-size: 22px;
+    });
   }
   ul {
     display: flex;
@@ -20,6 +23,10 @@
     padding: 0 10px;
     width: 33.33%;
     margin-bottom: 30px;
+    .small-mobile({
+      width: 100%;
+      margin-bottom: 20px;
+    });
   }
   ul:nth-child(3) li:nth-child(2) {
     margin-top:12px;
@@ -27,4 +34,7 @@
   ul:nth-child(3) li {
     margin-bottom:30px;
   }
+  .tablet({
+    padding: 25px 0;
+  });
 }

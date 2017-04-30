@@ -2,36 +2,89 @@
   background-color:#f57266;
   padding:200px 0 50px;
   margin-top:-200px;
-  h2 {
-    color:#ffffff;
-    font-size:44px;
-    margin-bottom:10px;
-  }
-  .button {
-    border:1px solid #000000 !important;
-    background-color: transparent;
-    border-radius: 5px;
-    font-size: 13px;
-    color:#ffffff;
-    display: block;
-    float: right;
-    width: 200px;
-    text-align: center;
-    padding:12px 15px 12px 15px;
-    text-transform: capitalize;
-    img {
-      margin-right: 15px;
-      display: inline-block;
-      width: 13px;
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    .thank-you-column {
+      width: 33.333%;
+      padding: 0 15px;
+      h2 {
+        .sans-serif-font;
+        float: right;
+        color: #ffffff;
+        font-size: 44px;
+        margin-bottom: 10px;
+        .desktop({
+          font-size: 42px;
+        });
+        .tablet({
+          font-size: 38px;
+        });
+        .mobile({
+          width: 100%;
+        })
+      }
+      .button {
+        border:1px solid #000000 !important;
+        background-color: transparent;
+        border-radius: 5px;
+        font-size: 13px;
+        color:#ffffff;
+        display: block;
+        float: right;
+        width: 185px;
+        text-align: center;
+        padding:10px 12px 10px 12px;
+        img {
+          margin-right: 15px;
+          display: inline-block;
+          width: 13px;
+        }
+        .tablet({
+          width: 180px;
+          float: right;
+        });
+        .mobile({
+          float: none;
+        })
+      }
+      .button:hover {
+        background-color:#000000;
+      }
+      .tablet({
+        max-width: 600px;
+        margin: 0 auto;
+      });
+      .mobile({
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        width: 100%;
+        padding: 15px 0;
+      });
+    }
+    .text-column {
+      width: 66.667%;
+      padding: 0 15px;
+        p {
+        color: @text-default;
+        font-size: 20px;
+        line-height: 25px;
+        .tablet({
+          padding: 0;
+        });
+        .small-mobile({
+          font-size: 17px;
+        });
+      }
+      .mobile({
+        width: 100%;
+      });
     }
   }
-  .button:hover {
-    background-color:#000000;
-  }
-  p {
-    color: @text-default;
-    font-size: 20px;
-    line-height: 27px;
-    padding: 15px 0 0;
-  }
+  .tablet({
+    text-align: center;
+  });
 }

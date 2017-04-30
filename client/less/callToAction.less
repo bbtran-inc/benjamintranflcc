@@ -2,19 +2,27 @@
   background-color:#f7f7f7;
   padding:50px 0;
   margin-top:80px;
-  .leftCol {
+  .column-left {
     max-width:400px;
+    .tablet({
+      max-width: 350px;
+    });
+    .mobile({
+      margin: 0 auto;
+      text-align: center;
+    });
   }
   h3 {
     font-size:25px;
     .sans-serif-bold;
+    margin: 0 0 10px;
   }
   p {
     color:#b0b0b0;
     font-size:18px;
+    padding-bottom: 15px;
   }
   form {
-    // padding-right:100px;
     position:relative;
     input {
       .sans-serif-font;
@@ -66,4 +74,10 @@
     max-width:500px;
     margin:0 auto;
   }
+  .tablet({
+    margin-top: 60px;
+  });
+  .small-mobile({
+    margin-top: 30px;
+  });
 }

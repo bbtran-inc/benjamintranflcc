@@ -17,16 +17,36 @@
     .sans-serif-font;
     font-size:13px;
     vertical-align: bottom;
-    text-transform:uppercase;
     span {
       &:nth-child(1) {
-        display:block;
-        width:16px;
-        margin:0 auto 20px;
+        display: block;
+        width :16px;
+        margin: 0 auto 20px;
       }
     }
+    .tablet({
+      margin: 0 15px 20px;
+    });
+    .mobile({
+      margin: 0 10px 30px;
+
+    });
+    .small-mobile({
+      margin: 0 30px 30px;
+
+    });
   }
+  .laptop-pic {
+    margin-top:50px;
+    .tablet({
+      margin-top: 20px;
+    });
+  }
+  .tablet({
+    padding: 50px 0;
+  });
+  .mobile({
+    padding: 25px 0;
+  })
 }
-.laptop-pic {
-  margin-top:50px;
-}
+
