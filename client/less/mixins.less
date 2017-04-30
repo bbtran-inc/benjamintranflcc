@@ -1,0 +1,86 @@
+// Mixins
+.mobile(@rules) {
+  @media (max-width: @tablet-width - 1px) {
+    @rules();
+  }
+}
+
+.tablet(@rules) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    @rules();
+  }
+}
+
+.desktop(@rules) {
+  @media (min-width: @desktop-width) {
+    @rules();
+  }
+}
+
+.transition-all() {
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+
+.background-cover() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.button-variant(@color; @background; @border) {
+	color: @color;
+	background-color: @background;
+	border-color: @border;
+	.transition-all;
+
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		color: @color;
+		background-color: darken(@background, 5%);
+	    border-color: darken(@border, 7%);
+	}
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			background-color: @background;
+			border-color: @border;
+		}
+	}
+
+	.badge {
+		color: @background;
+		background-color: @color;
+	}
+}
+
+.sans-serif-font() {
+	font-family: font92691, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.sans-serif-regular() {
+	font-family: font92691, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+}
+
+.sans-serif-bold() {
+	font-family: font92691, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 900;
+}
