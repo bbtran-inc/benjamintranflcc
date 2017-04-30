@@ -6,7 +6,7 @@
     max-width:400px;
   }
   h3 {
-    font-size:22px;
+    font-size:25px;
     .sans-serif-bold;
   }
   p {
@@ -14,15 +14,46 @@
     font-size:18px;
   }
   form {
-    padding-right:100px;
+    // padding-right:100px;
     position:relative;
-  }
-  input.submitButton {
-    position:absolute;
-    width:110px;
-    top:0;
-    right:0;
-    border-radius:0 5px 5px 0;
+    input {
+      .sans-serif-font;
+      height: 42px;
+      font-size: 15px;
+      outline: none;
+      color: @text-default;
+      display: block;
+      width: 100%;
+      padding: 12px 10px;
+      background-color:#ffffff;
+      border-radius: 5px;
+      border: 1px solid #d2d2d2;
+      &:focus {
+        border-color: #bbbbbb;
+      }
+    }
+    input + .submitButton {
+      .transition-all;
+      position: absolute;
+      display: block;
+      width: 100px;
+      height: 42px;
+      top: 0;
+      right: 0;
+      float: left;
+      border-radius:0 5px 5px 0;
+      background-color: @theme-primary;
+      font-size: 14px;
+      color: white;
+      border: none;
+      padding: 14px;
+      &:hover {
+        background-color:#d65246;
+      }
+      &:active {
+        background-color:#d65246;
+      }
+    }
   }
   h4 {
     font-size:24px;
