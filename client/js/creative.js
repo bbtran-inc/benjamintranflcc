@@ -10,39 +10,39 @@
         event.preventDefault();
     });
 
-    // Highlight the top nav as scrolling occurs
-    $('body').scrollspy({
-        target: '.navbar-fixed-top',
-        offset: 51
-    });
-
     // Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a').click(function() {
         $('.navbar-toggle:visible').click();
     });
 
-    // Offset for Main Navigation
-    $('#mainNav').affix({
-        offset: {
-            top: 100
-        }
-    })
-
     // Initialize and Configure Scroll Reveal Animation
-    window.sr = ScrollReveal();
-    sr.reveal('.sr-icons', {
-        duration: 600,
-        scale: 0.3,
+    window.sr = ScrollReveal({ reset: false, mobile: true });
+
+    sr.reveal('.top-content', {
+        duration: 700,
         distance: '0px'
     }, 200);
-    sr.reveal('.sr-button', {
-        duration: 1000,
-        delay: 200
-    });
-    sr.reveal('.sr-contact', {
+
+    sr.reveal('.sr-icons', {
         duration: 600,
-        scale: 0.3,
+        scale: .3,
         distance: '0px'
-    }, 300);
+    }, 200);
+
+    sr.reveal('.laptop-pic', {
+        duration: 600,
+        distance: '0px'
+    }, 200);
+
+    sr.reveal('.sr-featured', {
+        duration: 600,
+        scale: .3,
+        distance: '0px'
+    }, 200);
+
+    sr.reveal('.sr-social', {
+        duration: 2000,
+        distance: '0px'
+    }, 200);
 
 })(jQuery); // End of use strict
